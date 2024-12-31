@@ -1,0 +1,143 @@
+/* Общие стили для страницы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #343434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Контейнер для теста */
+#quiz-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    position: relative; /* Для позиционирования счетчика внутри контейнера */
+}
+
+/* Счетчик в правом верхнем углу */
+#question-number {
+    position: absolute;
+    top: 30px; /* Сделаем чуть ниже */
+    right: 20px;
+    font-size: 1.2em; /* Чуть увеличим размер шрифта */
+    color: #555;
+    font-weight: bold;
+}
+
+/* Заголовок */
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Вопрос */
+#question-text {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Стили для блока с вариантами ответов */
+#answers-container {
+    margin-bottom: 30px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Отображение ответов в 2 колонки */
+    gap: 10px;
+}
+
+.answer-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Плавное изменение фона и цвета текста */
+    cursor: pointer;
+}
+
+.answer-container:hover {
+    background-color: #e1e1e1;
+}
+
+label {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    visibility: hidden;
+}
+
+/* Кнопка "Следующий вопрос" */
+#next-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#next-button:hover {
+    background-color: #45a049;
+}
+
+/* Итоговый результат */
+#score {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Кнопка "Заново" */
+#restart-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#restart-button:hover {
+    background-color: #45a049;
+}
+
+/* Контейнер для кнопки "Заново" */
+#restart-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Стили для правильных и неправильных ответов */
+.correct {
+    background-color: green !important;
+    color: white !important;
+}
+
+.incorrect {
+    background-color: red !important;
+    color: white !important;
+}
