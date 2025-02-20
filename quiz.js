@@ -7,6 +7,16 @@ function getRandomQuestions(questions, numQuestions) {
     return shuffled.slice(0, numQuestions);
 }
 
+// Функция для случайного перемешивания ответов
+function shuffleAnswers(answers) {
+    const shuffledAnswers = [...answers];
+    for (let i = shuffledAnswers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledAnswers[i], shuffledAnswers[j]] = [shuffledAnswers[j], shuffledAnswers[i]]; // Перемешиваем элементы
+    }
+    return shuffledAnswers;
+}
+
 // Функция для отображения текущего вопроса
 function displayQuestion(question) {
     const questionText = document.getElementById('question-text');
@@ -20,8 +30,10 @@ function displayQuestion(question) {
     questionText.innerHTML = `${question.question}`;
     answersContainer.innerHTML = ''; // Очистить предыдущие ответы
 
+    const shuffledAnswers = shuffleAnswers(Object.entries(question.answers)); // Перемешиваем ответы
+
     // Отображаем ответы в контейнерах
-    for (const [key, value] of Object.entries(question.answers)) {
+    shuffledAnswers.forEach(([key, value]) => {
         const answerContainer = document.createElement('div');
         answerContainer.classList.add('answer-container');
         answerContainer.dataset.answer = key;
@@ -29,7 +41,7 @@ function displayQuestion(question) {
             <label>${value}</label>
         `;
         answersContainer.appendChild(answerContainer);
-    }
+    });
 
     nextButton.style.display = 'none'; // Скрыть кнопку "Следующий вопрос" до ответа
 
