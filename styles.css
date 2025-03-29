@@ -37,6 +37,7 @@ body {
     word-wrap: break-word; /* Перенос слов на новую строку */
     overflow-wrap: break-word; /* Перенос длинных слов */
     white-space: normal; /* Разрешаем перенос текста */
+    hyphens: auto; /* Перенос по слогам */
 }
 
 /* Ответы */
