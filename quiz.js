@@ -1,12 +1,6 @@
 let currentQuestionIndex = 0; // Индекс текущего вопроса
 let score = 0; // Баллы
 
-// Функция для случайного выбора 50 вопросов из 100
-function getRandomQuestions(questions, numQuestions) {
-    const shuffled = [...questions].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, numQuestions);
-}
-
 // Функция для случайного перемешивания ответов
 function shuffleAnswers(answers) {
     return [...answers].sort(() => Math.random() - 0.5);
@@ -19,7 +13,7 @@ function displayQuestion(question) {
     const nextButton = document.getElementById('next-button');
     const questionNumber = document.getElementById('question-number');
 
-    questionNumber.innerHTML = `${currentQuestionIndex + 1} из 50`;
+    questionNumber.innerHTML = `${currentQuestionIndex + 1} из ${selectedQuestions.length}`;
     questionText.innerHTML = `${question.question}`;
     answersContainer.innerHTML = '';
 
@@ -101,14 +95,14 @@ function nextQuestion() {
 function showFinalScore() {
     document.getElementById('score').style.display = 'block';
     document.getElementById('score').innerHTML = `Ваш балл: ${score} из ${selectedQuestions.length}`;
-    document.getElementById('result-message').innerHTML = score < 25 ? 'Тест провален' : 'Ай харош';
+    document.getElementById('result-message').innerHTML = score < selectedQuestions.length / 2 ? 'Тест провален' : 'Ай харош';
     document.getElementById('restart-button-container').style.display = 'block';
 }
 
 function restartTest() {
     score = 0;
     currentQuestionIndex = 0;
-    selectedQuestions = getRandomQuestions(myQuestions, 50);
+    selectedQuestions = [...myQuestions].sort(() => 0.5 - Math.random()); // Все вопросы, перемешанные
     displayQuestion(selectedQuestions[currentQuestionIndex]);
     document.getElementById('score').style.display = 'none';
     document.getElementById('result-message').innerHTML = '';
@@ -116,16 +110,17 @@ function restartTest() {
     document.getElementById('next-button').style.display = 'block';
 }
 
-document.getElementById('next-button').addEventListener('click', nextQuestion);
-let selectedQuestions = getRandomQuestions(myQuestions, 50);
-displayQuestion(selectedQuestions[currentQuestionIndex]);
-document.getElementById('restart-button').addEventListener('click', restartTest);
-
 function lockAnswers() {
     document.querySelectorAll('.answer-container').forEach(container => {
         container.style.pointerEvents = 'none';
     });
 }
+
+document.getElementById('next-button').addEventListener('click', nextQuestion);
+document.getElementById('restart-button').addEventListener('click', restartTest);
+
+// Загружаем все вопросы и перемешиваем
+let selectedQuestions = [...myQuestions].sort(() => 0.5 - Math.random());
 
 document.addEventListener('DOMContentLoaded', function() {
     displayQuestion(selectedQuestions[currentQuestionIndex]);
