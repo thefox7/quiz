@@ -1,9 +1,15 @@
 let currentQuestionIndex = 0; // Индекс текущего вопроса
 let score = 0; // Баллы
 
-// Функция для случайного перемешивания ответов
+// Функция для случайного перемешивания массива
 function shuffleAnswers(answers) {
     return [...answers].sort(() => Math.random() - 0.5);
+}
+
+// Функция для выбора случайных 50 вопросов
+function getRandomQuestions(allQuestions, numQuestions = 50) {
+    const shuffled = [...allQuestions].sort(() => 0.5 - Math.random()); // Перемешиваем все вопросы
+    return shuffled.slice(0, numQuestions); // Берем первые numQuestions случайных вопросов
 }
 
 // Функция для отображения текущего вопроса
@@ -102,7 +108,7 @@ function showFinalScore() {
 function restartTest() {
     score = 0;
     currentQuestionIndex = 0;
-    selectedQuestions = [...myQuestions].sort(() => 0.5 - Math.random()); // Все вопросы, перемешанные
+    selectedQuestions = getRandomQuestions(myQuestions, 50); // Случайные 50 вопросов
     displayQuestion(selectedQuestions[currentQuestionIndex]);
     document.getElementById('score').style.display = 'none';
     document.getElementById('result-message').innerHTML = '';
@@ -119,8 +125,8 @@ function lockAnswers() {
 document.getElementById('next-button').addEventListener('click', nextQuestion);
 document.getElementById('restart-button').addEventListener('click', restartTest);
 
-// Загружаем все вопросы и перемешиваем
-let selectedQuestions = [...myQuestions].sort(() => 0.5 - Math.random());
+// Загружаем все вопросы и перемешиваем для начального отображения
+let selectedQuestions = getRandomQuestions(myQuestions, 50); // Случайные 50 вопросов
 
 document.addEventListener('DOMContentLoaded', function() {
     displayQuestion(selectedQuestions[currentQuestionIndex]);
