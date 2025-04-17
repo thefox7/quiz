@@ -1878,7 +1878,7 @@ var myQuestions = [
             c: "Знал бы, где упадёшь, соломки бы подстелил",
             d: "Молодой учёный продолжает это важное исследование"
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 172,
@@ -1889,7 +1889,7 @@ var myQuestions = [
             c: "За городом поднимается, хохочущее, веселое солнце",
             d: "Продумайте туристические маршруты, назовите самые интересные, и уникальные места"
         },
-        correctAnswer: b
+        correctAnswer: "b"
     },
     {
         index: 173,
@@ -1900,7 +1900,7 @@ var myQuestions = [
             c: "п..еса, сем..я",
             d: "в..явь, с..емка"
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 174,
@@ -1911,7 +1911,7 @@ var myQuestions = [
             c: "Выше головы не прыгнешь.",
             d: "Время дороже денег."
         },
-        correctAnswer: a
+        correctAnswer: "a"
     },
     {
         index: 175,
@@ -1922,7 +1922,7 @@ var myQuestions = [
             c: "Постой отвечает ветер буйный там за речкой тихоструйной есть высокая гора.",
             d: "Князь печально отвечает: «Грусть-тоска меня съедает»."
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 176,
@@ -1933,7 +1933,7 @@ var myQuestions = [
             c: "мы создаем",
             d: "поверить в чудо"
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 177,
@@ -1944,7 +1944,7 @@ var myQuestions = [
             c: "более высокая",
             d: "самый удивительный"
         },
-        correctAnswer: c
+        correctAnswer: "c"
     },
     {
         index: 178,
@@ -1955,7 +1955,7 @@ var myQuestions = [
             c: "спросить (н..) (у)кого",
             d: "не притронулся (н..) (к)чему"
         },
-        correctAnswer: b
+        correctAnswer: "b"
     },
     {
         index: 179,
@@ -1966,7 +1966,7 @@ var myQuestions = [
             c: "концовка",
             d: "рифма"
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 180,
@@ -1977,7 +1977,7 @@ var myQuestions = [
             c: "эпитет",
             d: "метафора"
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 181,
@@ -1988,7 +1988,7 @@ var myQuestions = [
             c: "Кормилиц",
             d: "Джульетте"
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 182,
@@ -1999,7 +1999,7 @@ var myQuestions = [
             c: "одическая",
             d: "силлабическая"
         },
-        correctAnswer: a
+        correctAnswer: "a"
     },
     {
         index: 183,
@@ -2010,7 +2010,7 @@ var myQuestions = [
             c: "эпос",
             d: "лирика"
         },
-        correctAnswer: b
+        correctAnswer: "b"
     },
     {
         index: 184,
@@ -2021,7 +2021,7 @@ var myQuestions = [
             c: "Иван",
             d: "Гаврила"
         },
-        correctAnswer: c
+        correctAnswer: "c"
     },
     {
         index: 185,
@@ -2032,7 +2032,7 @@ var myQuestions = [
             c: "анафора",
             d: "бессоюзие"
         },
-        correctAnswer: c
+        correctAnswer: "c"
     },
     {
         index: 186,
@@ -2043,7 +2043,7 @@ var myQuestions = [
             c: "историческое событие",
             d: "устное народное творчество"
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 187,
@@ -2054,7 +2054,7 @@ var myQuestions = [
             c: "хронотоп",
             d: "образ"
         },
-        correctAnswer: a
+        correctAnswer: "a"
     },
     {
         index: 188,
@@ -2065,7 +2065,7 @@ var myQuestions = [
             c: "чужой",
             d: "светлый"
         },
-        correctAnswer: c
+        correctAnswer: "c"
     },
     {
         index: 189,
@@ -2076,7 +2076,7 @@ var myQuestions = [
             c: "романтизм",
             d: "реализм"
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 190,
@@ -2087,7 +2087,7 @@ var myQuestions = [
             c: "значительная временная протяженность действия",
             d: "один конфликт"
         },
-        correctAnswer: c
+        correctAnswer: "c"
     },
     {
         index: 191,
@@ -2098,7 +2098,7 @@ var myQuestions = [
             c: "эпитет",
             d: "сравнение"
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 192,
@@ -2109,7 +2109,7 @@ var myQuestions = [
             c: "композиционная",
             d: "линейная"
         },
-        correctAnswer: b
+        correctAnswer: "b"
     },
     {
         index: 193,
@@ -2120,7 +2120,7 @@ var myQuestions = [
             c: "классицизма",
             d: "романтизма"
         },
-        correctAnswer: c
+        correctAnswer: "c"
     },
     {
         index: 194,
@@ -2131,7 +2131,7 @@ var myQuestions = [
             c: "Илья и Соловей - разбойник",
             d: "Илья Муромец и Калин -царь"
         },
-        correctAnswer: c
+        correctAnswer: "c"
     },
     {
         index: 195,
@@ -2142,7 +2142,7 @@ var myQuestions = [
             c: "трагедия",
             d: "драма"
         },
-        correctAnswer: b
+        correctAnswer: "b"
     },
     {
         index: 196,
@@ -2153,7 +2153,7 @@ var myQuestions = [
             c: "стихотворение, трагедия",
             d: "роман, повесть"
         },
-        correctAnswer: a
+        correctAnswer: "a"
     },
     {
         index: 197,
@@ -2164,7 +2164,7 @@ var myQuestions = [
             c: "негодуют",
             d: "недоедают"
         },
-        correctAnswer: a
+        correctAnswer: "a"
     },
     {
         index: 198,
@@ -2175,7 +2175,7 @@ var myQuestions = [
             c: "тетрадь",
             d: "молоко"
         },
-        correctAnswer: d
+        correctAnswer: "d"
     },
     {
         index: 199,
@@ -2186,7 +2186,7 @@ var myQuestions = [
             c: "О, О, О и О",
             d: "О и О, О, О"
         },
-        correctAnswer: c
+        correctAnswer: "c"
     },
     {
         index: 200,
@@ -2197,7 +2197,7 @@ var myQuestions = [
             c: "условия",
             d: "причины"
         },
-        correctAnswer: c
+        correctAnswer: "c"
     },
     {
         index: 201,
@@ -2208,6 +2208,6 @@ var myQuestions = [
             c: "гипербола",
             d: "градация"
         },
-        correctAnswer: a
+        correctAnswer: "a"
     }
 ];
